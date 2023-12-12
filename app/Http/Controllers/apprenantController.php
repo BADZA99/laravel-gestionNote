@@ -37,10 +37,10 @@ class apprenantController extends Controller
         $apprenant->prenom = $request->prenom;
         $apprenant->matricule = $request->matricule;
 
-        // Save the apprenant to the database
+        // enregistrer dans la bdd
         $apprenant->save();
 
-        // Redirect to the apprenants index page with a success message
+        // Redirection sur la page apprenant avec un message
         return redirect()->route('liste-apprenants')->with('success', 'Apprenant created successfully.');
     }
 
