@@ -1,0 +1,22 @@
+// php artisan make:model Apprenant
+// php artisan make:migration create_table_apprenant
+// php artisan migrate
+
+// pour modifier une table
+// php artisan make:migration add_matricule_column_to_table_aprenant_table
+// faire ses modifs dans up() et l'inverse dans down() ensuite
+// php artisan migrate
+
+// creer un controller 
+// php artisan make:controller aprrenantController
+
+
+// ajouter des donnees automatiquement dans la base
+// php artisan make:seeder ApprenantSeeder
+
+// php artisan db:seed 
+
+
+
+
+// 
