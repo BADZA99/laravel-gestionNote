@@ -11,7 +11,7 @@
     <h1 style="text-align: center; color: #4CAF50;">Formulaire ajout apprenant</h1>
 
     <form action="{{ route('store-apprenant') }}" method="POST" style="max-width: 500px; margin: auto;">
-        @csrf
+    
 
         <div style="margin-bottom: 15px;">
             <label for="nom" style="display: block; margin-bottom: 5px;">Nom</label>

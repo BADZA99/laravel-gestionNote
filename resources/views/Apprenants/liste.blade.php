@@ -10,7 +10,7 @@
  <body>
      <h1 style="text-align: center; color: blue;">Liste des Apprenants</h1>
      <!-- affiche correctement les apprenants -->
-     <a href="{{ route('add-new-student') }}" class="btn btn-primary" style="margin-top: 5px;margin-bottom: 5px; display: inline-block; font-weight: 400; color: #fff; text-align: center; vertical-align: middle; cursor: pointer; background-color: #4CAF50; border: 1px solid transparent; padding: .375rem .75rem; font-size: 1rem; line-height: 1.5; border-radius: .25rem; transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;">Ajouter</a>
+     <a href="{{ route('add-new-student') }}" class="btn btn-primary" style="margin-top: 5px;margin-bottom: 5px; display: inline-block; font-weight: 400; color: #fff; text-align: center; vertical-align: middle; cursor: pointer; background-color: blue; border: 1px solid transparent; padding: .375rem .75rem; font-size: 1rem; line-height: 1.5; border-radius: .25rem; transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;">Ajouter</a>
      <table style="width: 90%; border-collapse: collapse; margin: 0 auto; font-family: Arial, sans-serif;">
          <thead>
              <tr>
@@ -31,6 +31,6 @@
              @endforeach
          </tbody>
      </table>
-     <a href="{{ route('liste-matieres') }}" class="btn btn-primary" style="margin-top: 15px;display: inline-block; font-weight: 400; color: #fff; text-align: center; vertical-align: middle; cursor: pointer; background-color: #4CAF50; border: 1px solid transparent; padding: .375rem .75rem; font-size: 1rem; line-height: 1.5; border-radius: .25rem; transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;">page matière</a>
+     <a href="{{ route('liste-matieres') }}" class="btn btn-primary" style="margin-top: 15px;display: inline-block; font-weight: 400; color: #fff; text-align: center; vertical-align: middle; cursor: pointer; background-color: blue; border: 1px solid transparent; padding: .375rem .75rem; font-size: 1rem; line-height: 1.5; border-radius: .25rem; transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;">page matière</a>
 
  </body>

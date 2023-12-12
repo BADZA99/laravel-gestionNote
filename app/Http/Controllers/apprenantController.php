@@ -31,6 +31,16 @@ class apprenantController extends Controller
             'matricule' => 'required',
         ]);
 
+        // autoriser tous les requetes
+        // Apprenant::create($request->all());
+
+        // creer un tab associatif dans lequel les cles sont les connes au niveau de la bdd et ce qui est dans les inputs sont les names de notre formulaire. (pas la peine de creer un fillable)
+        // apprenant::create([
+        //     'nom' => $request->input('nom'),
+        //     'prenom' => $request->input('prenom'),
+        //     'matricule' => $request->input("matricule"),
+        // ]);
+
         // Create a new apprenant
         $apprenant = new Apprenant;
         $apprenant->nom = $request->nom;
