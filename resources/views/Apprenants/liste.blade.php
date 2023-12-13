@@ -18,6 +18,7 @@
                  <th scope="col" style="border: 1px solid #ddd; padding: 15px; text-align: left; background-color: blue; color: white;">nom</th>
                  <th scope="col" style="border: 1px solid #ddd; padding: 15px; text-align: left; background-color: blue; color: white;">prenom</th>
                  <th scope="col" style="border: 1px solid #ddd; padding: 15px; text-align: left; background-color: blue; color: white;">matricule</th>
+                 <th scope="col" style="border: 1px solid #ddd; padding: 15px; text-align: left; background-color: blue; color: white;">actions</th>
              </tr>
          </thead>
          <tbody>
@@ -27,6 +28,9 @@
                  <td style="border: 1px solid #ddd; padding: 15px;">{{$apprenant->nom}}</td>
                  <td style="border: 1px solid #ddd; padding: 15px;">{{$apprenant->prenom}}</td>
                  <td style="border: 1px solid #ddd; padding: 15px;">{{$apprenant->matricule}}</td>
+                    <td style="border: 1px solid #ddd; padding: 15px;">
+                        <a href="{{ route('edit-apprenant', $apprenant->id) }}" class="btn btn-primary" style="margin-top: 5px;margin-bottom: 5px; display: inline-block; font-weight: 400; color: #fff; text-align: center; vertical-align: middle; cursor: pointer; background-color: green; border: 1px solid transparent; padding: .375rem .75rem; font-size: 1rem; line-height: 1.5; border-radius: .25rem; transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;">Modifier</a>
+                        <a href="{{ route('delete-apprenant', $apprenant->id) }}" class="btn btn-primary" style="margin-top: 5px;margin-bottom: 5px; display: inline-block; font-weight: 400; color: #fff; text-align: center; vertical-align: middle; cursor: pointer; background-color: red; border: 1px solid transparent; padding: .375rem .75rem; font-size: 1rem; line-height: 1.5; border-radius: .25rem; transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;">Supprimer</a>
              </tr>
              @endforeach
          </tbody>

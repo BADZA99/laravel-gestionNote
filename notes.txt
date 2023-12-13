@@ -14,7 +14,9 @@
 // ajouter des donnees automatiquement dans la base
 // php artisan make:seeder ApprenantSeeder
 
-// php artisan db:seed 
+// php artisan db:seed
+
+// faire modifier et supprimer apprenant et gestion en erreur en ajout (affcher les erreurs)
 
 
 

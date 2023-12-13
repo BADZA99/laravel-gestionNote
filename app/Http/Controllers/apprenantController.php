@@ -54,6 +54,53 @@ class apprenantController extends Controller
         return redirect()->route('liste-apprenants')->with('success', 'Apprenant created successfully.');
     }
 
+    // fonction pour modifier un etudiant
+    public function edit($id)
+    {
+        // recuperer l'apprenant a modifier
+        $apprenant = Apprenant::find($id);
+        // dd($apprenant);
+        return view('Apprenants.edit', compact('apprenant'));
+    }
+
+    // fonction pour mettre a jour un etudiant
+    public function update(Request $request, $id)
+    {
+        // Validate the request data
+        $request->validate([
+            'nom' => 'required',
+            'prenom' => 'required',
+            'matricule' => 'required',
+        ]);
+
+        // recuperer l'apprenant a modifier
+        $apprenant = Apprenant::find($id);
+
+        // modifier les donnees de l'apprenant
+        $apprenant->nom = $request->nom;
+        $apprenant->prenom = $request->prenom;
+        $apprenant->matricule = $request->matricule;
+
+        // enregistrer dans la bdd
+        $apprenant->save();
+
+        // Redirection sur la page apprenant avec un message
+        return redirect()->route('liste-apprenants')->with('success', 'Apprenant updated successfully.');
+    }
+
+    // fonction pour supprimer un etudiant
+    public function destroy($id)
+    {
+        // recuperer l'apprenant a supprimer
+        $apprenant = Apprenant::find($id);
+
+        // supprimer l'apprenant
+        $apprenant->delete();
+
+        // Redirection sur la page apprenant avec un message
+        return redirect()->route('liste-apprenants')->with('success', 'Apprenant deleted successfully.');
+    }
+
     
 
 
