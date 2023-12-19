@@ -1,43 +1,23 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="fr">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>Welcome</title>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion des Notes</title>
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom Styles -->
-    <style>
-        body {
-            background-color: #f8f9fa;
-        }
-
-        .container {
-            max-width: 600px;
-            margin: auto;
-            padding-top: 50px;
-        }
-
-        .jumbotron {
-            background-color: #ffffff;
-            padding: 2rem 2rem;
-            border-radius: .3rem;
-        }
-    </style>
 </head>
 
 <body>
     <div class="container">
-        <div class="jumbotron">
-            <h1 class="display-4">Welcome to Our Application!</h1>
-            <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+        <div class="jumbotron mt-5">
+            <h1 class="display-4">Bienvenue dans l'application de gestion des notes!</h1>
+            <p class="lead">Cette application vous permet de gérer les notes des étudiants et les matières.</p>
             <hr class="my-4">
-            <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-            <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+            <p>Choisissez une option ci-dessous pour commencer.</p>
+            <a class="btn btn-primary btn-lg mr-2" href="{{ route('liste-apprenants') }}" role="button">Gérer les Apprenants</a>
+            <a class="btn btn-secondary btn-lg" href="{{ route('liste-matieres') }}" role="button">Gérer les Matières</a>
         </div>
     </div>
 </body>

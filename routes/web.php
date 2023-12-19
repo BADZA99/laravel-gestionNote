@@ -41,5 +41,12 @@ Route::get('/matieres', [matiereController::class, 'index'])->name('liste-matier
 Route::get('/matieres/new', [matiereController::class, 'create'])->name('add-new-matiere');
 Route::post('/matieres/store', [matiereController::class, 'store'])->name('store-matiere');
 
+// modifier matiere
+Route::get('/matieres/edit/{id}', [matiereController::class, 'edit'])->name('edit-matiere');
+// maj matiere
+Route::post('/matieres/update/{id}', [matiereController::class, 'update'])->name('update-matiere');
+// supprimer matiere
+Route::get('/matieres/delete/{id}', [matiereController::class, 'destroy'])->name('delete-matiere');
+
 
 

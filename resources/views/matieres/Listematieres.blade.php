@@ -19,6 +19,7 @@
                     <th scope="col" style="border: 1px solid #ddd; padding: 15px; text-align: left; background-color: #4CAF50; color: white;">id</th>
                     <th scope="col" style="border: 1px solid #ddd; padding: 15px; text-align: left; background-color: #4CAF50; color: white;">libelle</th>
                     <th scope="col" style="border: 1px solid #ddd; padding: 15px; text-align: left; background-color: #4CAF50; color: white;">coef</th>
+                    <th scope="col" style="border: 1px solid #ddd; padding: 15px; text-align: left; background-color: #4CAF50; color: white;">Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -27,6 +28,10 @@
                     <th scope="row" style="border: 1px solid #ddd; padding: 15px;">{{$matiere->id}}</th>
                     <td style="border: 1px solid #ddd; padding: 15px;">{{$matiere->libelle}}</td>
                     <td style="border: 1px solid #ddd; padding: 15px;">{{$matiere->coefficient}}</td>
+                    <td style="border: 1px solid #ddd; padding: 15px;">
+                        <a href="{{ route('edit-matiere', $matiere->id) }}" class="btn btn-primary" style="margin-top: 5px;margin-bottom: 5px; display: inline-block; font-weight: 400; color: #fff; text-align: center; vertical-align: middle; cursor: pointer; background-color: green; border: 1px solid transparent; padding: .375rem .75rem; font-size: 1rem; line-height: 1.5; border-radius: .25rem; transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;">Modifier</a>
+                        <a href="{{ route('delete-matiere', $matiere->id) }}" class="btn btn-primary" style="margin-top: 5px;margin-bottom: 5px; display: inline-block; font-weight: 400; color: #fff; text-align: center; vertical-align: middle; cursor: pointer; background-color: red; border: 1px solid transparent; padding: .375rem .75rem; font-size: 1rem; line-height: 1.5; border-radius: .25rem; transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;">Supprimer</a>
+                    </td>
                 </tr>
                 @endforeach
             </tbody>
